@@ -32,6 +32,13 @@ Add the following line to the `/etc/hosts` file:
 
 	127.0.0.1 www.logperiodic.local logperiodic.local
 
+### Install dependencies
+
+All dependencies are installed via composer. For more details visit it's [website](http://getcomposer.org).
+
+	./bin/composer self-update
+	./bin/composer install
+
 ### Other environments apache configuration
 
 Apache configuration files for other environments can be found [here](https://github.com/czerasz/logperiodic.info/tree/master/config/apache).
