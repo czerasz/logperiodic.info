@@ -1,0 +1,18 @@
+<VirtualHost www.release.logperiodic.info:80 >
+	ServerAdmin	logperiodic.info@gmail.com
+	DocumentRoot	/var/www/logperiodic.info/release/current/public
+	ServerName	www.release.logperiodic.info
+	ServerAlias release.logperiodic.info
+
+	ErrorLog /var/log/apache2/logperiodic.info/release/error_log
+	CustomLog /var/log/apache2/logperiodic.info/release/access_log combined
+
+	SetEnv APPLICATION_ENV "release"
+
+  <Directory /var/www/logperiodic.info/release/current/public >
+    DirectoryIndex index.php
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+	</Directory>
+</VirtualHost>

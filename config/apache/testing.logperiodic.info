@@ -1,0 +1,18 @@
+<VirtualHost www.testing.logperiodic.info:80 >
+	ServerAdmin	logperiodic.info@gmail.com
+	DocumentRoot	/var/www/logperiodic.info/testing/current/public
+	ServerName	www.testing.logperiodic.info
+	ServerAlias testing.logperiodic.info
+
+	ErrorLog /var/log/apache2/logperiodic.info/testing/error_log
+	CustomLog /var/log/apache2/logperiodic.info/testing/access_log combined
+
+	SetEnv APPLICATION_ENV "testing"
+
+  <Directory /var/www/logperiodic.info/testing/current/public >
+    DirectoryIndex index.php
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+	</Directory>
+</VirtualHost>

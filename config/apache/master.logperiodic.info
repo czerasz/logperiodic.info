@@ -1,0 +1,18 @@
+<VirtualHost www.master.logperiodic.info:80 >
+	ServerAdmin	logperiodic.info@gmail.com
+	DocumentRoot	/var/www/logperiodic.info/master/current/public
+	ServerName	www.master.logperiodic.info
+	ServerAlias master.logperiodic.info
+
+	ErrorLog /var/log/apache2/logperiodic.info/master/error_log
+	CustomLog /var/log/apache2/logperiodic.info/master/access_log combined
+
+	SetEnv APPLICATION_ENV "master"
+
+  <Directory /var/www/logperiodic.info/master/current/public >
+    DirectoryIndex index.php
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+	</Directory>
+</VirtualHost>
