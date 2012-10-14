@@ -55,7 +55,8 @@ namespace :deploy do
   end
 
 	task :finalize_update do
-    puts "    not doing finalize_update because not a Rails application."
+    puts "    Install packages with composer:"
+    run "cd #{release_path}; ./bin/composer install"
   end
 
 	task :start, :roles => :app do
